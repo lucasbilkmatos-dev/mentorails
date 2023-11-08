@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_08_144756) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_08_150201) do
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.integer "user_id", null: false
@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_08_144756) do
     t.date "start_date"
     t.time "recurrence_time"
     t.integer "repetitions"
+    t.boolean "completed"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 

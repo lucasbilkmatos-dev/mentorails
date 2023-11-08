@@ -1,0 +1,3 @@
+rails g scaffold user email:string name:string
+rails g scaffold item name:string user:references
+rails g migration add_date_to_items start_date:date recurrence_time:time repetitions:integer
